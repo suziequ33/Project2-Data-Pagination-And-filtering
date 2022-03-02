@@ -17,6 +17,23 @@ For assistance:
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
 */
+const numbOfStud= 9;
+
+function pages (list, page) {
+   const startIndex = (page * numbOfStud) - numbOfStud;
+   const endIndex = page * numbOfStud;
+   const ul = document.querySelector('.student-list')
+   ul.textContent = '';
+for( i >= startIndex && i < endIndex) {
+   ul +=`<li>${list[i]}</li>`;
+   ul.insertAdjacentElement(
+      'beforeend',
+console.log(page)
+   )
+}
+}
+
+
 
 
 
