@@ -20,7 +20,8 @@ This function will create and insert/append the elements needed to display a "pa
 /*
 */
 const numbOfStud= 9;
-const ul = document.querySelector('.student-list');
+const ul = document.querySelector(".student-list");     
+                            
 
 
 function pages (list, page) {
@@ -28,6 +29,7 @@ function pages (list, page) {
    const endIndex = (page * numbOfStud);
    ul.textContent = '';
 for( let i = 0; i < ul.length; i++) {
+   ul[i].style.display = '';
    if (i >=startIndex && i < endIndex){
 
 
