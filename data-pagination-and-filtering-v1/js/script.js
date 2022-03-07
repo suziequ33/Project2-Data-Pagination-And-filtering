@@ -17,44 +17,52 @@ For assistance:
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
 */
-/*
+/*number of students per page(9)
+I used querySelector to select all of the students.
 */
 const numbOfStud= 9;
-const ul = document.querySelector(".student-list");     
-                            
+const list = document.querySelector(".student-list");     
 
 
-function pages (list, page) {
+
+function showPage (list, page) {
    const startIndex = (page * numbOfStud) - numbOfStud;
    const endIndex = (page * numbOfStud);
-   ul.textContent = '';
-for( let i = 0; i < ul.length; i++) {
-   ul[i].style.display = '';
+   list.innerHTML = '';
+for( let i = 0; i < list.length; i++) {
    if (i >=startIndex && i < endIndex){
-
-
-   
-
-
-
-   ul +=`<li>${list[i]}</li>`;
-   ul.insertAdjacentElement(
-      'beforeend',
-
-   )
+      studentList =`
+      <li class="student-item cf">
+         <div class="student-details">
+      <img class="avatar" src="${list[i].picture.large}" alt="Profile Picture">
+      <h3>${list[i].name.title}${list[i].name.first} ${list[i].name.last}</h3>
+      <span class="email">${list[i].email}</span>
+    </div>
+    <div class="joined-details">
+      <span class="date">Joined ${list[i].registered.date}</span>
+    </div>
+  </li> `;
    }
 }
+list.insertAdjacentElement('beforeend',studentList)
 }
+//console.log(list)
 
-
-
+/**i found a code example for the DOM elements in the chalange of the pet object.
+ * aslo found examples of li code in notes of array-of-objects.
+ * and copy pasted the li code from the instructions
+ * 
+ */
 
 
 /*
 Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
 */
+function addPagination(list){
 
 
+//}
 
-// Call functions
+
+// Call function
