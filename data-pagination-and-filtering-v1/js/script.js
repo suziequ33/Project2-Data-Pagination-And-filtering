@@ -21,14 +21,14 @@ This function will create and insert/append the elements needed to display a "pa
 I used querySelector to select all of the students.
 */
 const numbOfStud= 9;
-const list = document.querySelector(".student-list");     
-
+const listStudents = document.querySelector(".student-list");     
+const linkList = document.querySelector('.link-list');
 
 
 function showPage (list, page) {
    const startIndex = (page * numbOfStud) - numbOfStud;
    const endIndex = (page * numbOfStud);
-   list.innerHTML = '';
+   listStudents.innerHTML = '';
 for( let i = 0; i < list.length; i++) {
    if (i >=startIndex && i < endIndex){
       studentList =`
@@ -44,9 +44,9 @@ for( let i = 0; i < list.length; i++) {
   </li> `;
    }
 }
-list.insertAdjacentElement('beforeend',studentList)
+listStudents.insertAdjacentElement('beforeend',studentList)
 }
-//console.log(list)
+//console.log(list) test code
 
 /**i found a code example for the DOM elements in the chalange of the pet object.
  * aslo found examples of li code in notes of array-of-objects.
@@ -60,9 +60,26 @@ Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
 */
 function addPagination(list){
+   const paginPage = Math.ceil(list.length/9);
+   linkList.innerHTML = '';
+for(let i = 1; i <= paginPage; i++){
+   pageBtn = `
+   <li><button type="button">${i}</button></li>`;
+}
+linkList.insertAdjacentElement('beforeend', pageBtn)
 
+   const firstButton= document.querySelector('button');
+   firstButton.setAttribute('class', 'active');
+    linkList.addEventListener('click', ()=> {
+      if(){
 
-//}
+      }
+   })
+}
 
-
+/** 63- i used Math.ceil because it rounds up.
+*i found examples of pagination on website stack overflow.
+* set pagination button/give it a class of active. found in notes/ Change element attributes.
+*/
 // Call function
+
