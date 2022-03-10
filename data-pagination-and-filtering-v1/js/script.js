@@ -52,8 +52,8 @@ listStudents.insertAdjacentHTML('beforeend',studentList)
 
 //console.log(list) test code
 
-/**i found a code example for the DOM elements in the chalange of the pet object.
- * aslo found examples of li code in notes of array-of-objects.
+/**i found a code example for the DOM elements in the challenge of the pet object.
+ * also found examples of li code in notes of array-of-objects.
  * and copy pasted the li code from the instructions
  * could see why code wasnt working and noticed that i was using .insertAdjcentElement
  * Changed to .insertAdjecentHTML the right code.
@@ -76,9 +76,9 @@ linkList.insertAdjacentHTML('beforeend', pageBtn)
     linkList.addEventListener('click', e => {
       if(e.target.tagName ==='BUTTON'){
          const button = e.target;
-         button.className = 'active';
          const removeBtn = document.querySelector('.active');
          removeBtn.className = '';
+         button.className = 'active';
          const btnDisplay = button.textContent;
          showPage(list,btnDisplay);
       }
@@ -90,6 +90,10 @@ linkList.insertAdjacentHTML('beforeend', pageBtn)
 *i found examples of pagination on website stack overflow.
 * set pagination button/give it a class of active. found in notes/ Change element attributes.
 * looked more into active on w3schools.com to understand more.
+*after peer review(Thanks Brian Jensen) found out i didnt have the correct order for the 
+*active class name. Shoud be: we get active wiht querySelector, then add it to empty string;
+* then button.className to active. 
+* Note to self look more in the dev tools and expand them.....
 *found examples of e.target.tagName in traversing up the DOM with parentNode.
 *when checked found i only got one student to load and page 5 found i needed to move
 *the curly brace(68) of the for loop to include the linkList.insertAdjecentHTML.
