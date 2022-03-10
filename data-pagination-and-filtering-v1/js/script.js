@@ -92,14 +92,15 @@ linkList.insertAdjacentHTML('beforeend', pageBtn)
 * looked more into active on w3schools.com to understand more.
 *after peer review(Thanks Brian Jensen) found out i didnt have the correct order for the 
 *active class name. Shoud be: we get active wiht querySelector, then add it to empty string;
-* then button.className to active. 
+* then button.className to active. found examples in notes Pseudo-Classes.
 * Note to self look more in the dev tools and expand them.....
 *found examples of e.target.tagName in traversing up the DOM with parentNode.
 *when checked found i only got one student to load and page 5 found i needed to move
 *the curly brace(68) of the for loop to include the linkList.insertAdjecentHTML.
 *again students would be on page but i had the whole list or only one went back though code and found 
 *listStudents.insertAdjacentHTML(46) was in the wrong bracket. it needs to be within all of them.
-*not outside the for loop or the if statement.
+*not outside the for loop or the if statement. found answer in notes: 
+*Insert HTML at Specified Positions.
 */
 // Call function
 showPage(data,1);
