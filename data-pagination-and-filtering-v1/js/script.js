@@ -19,6 +19,8 @@ This function will create and insert/append the elements needed to display a "pa
 */
 /*number of students per page(9)
 I used querySelector to select all of the students.
+Put linkList at the top in the global scope.
+Dont forget to add a space between the .name.title and .name.first and .name.last
 */
 const numbOfStud= 9;
 const listStudents = document.querySelector(".student-list");     
@@ -87,6 +89,7 @@ linkList.insertAdjacentHTML('beforeend', pageBtn)
 /** 63- i used Math.ceil because it rounds up.
 *i found examples of pagination on website stack overflow.
 * set pagination button/give it a class of active. found in notes/ Change element attributes.
+* looked more into active on w3schools.com to understand more.
 *found examples of e.target.tagName in traversing up the DOM with parentNode.
 *when checked found i only got one student to load and page 5 found i needed to move
 *the curly brace(68) of the for loop to include the linkList.insertAdjecentHTML.
